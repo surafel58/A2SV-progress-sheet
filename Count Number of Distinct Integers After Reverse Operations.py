@@ -3,11 +3,17 @@ class Solution:
         n = len(nums)
 
         for i in range(n):
-            temp = str(nums[i])
-            temp = temp[::-1]
 
-            nums.append(int(temp))
+            num = nums[i] 
+            reversed_num = 0
 
+            while num != 0:
+                digit = num % 10
+                reversed_num = reversed_num * 10 + digit
+                num //= 10
+
+            nums.append(reversed_num)
+        
         nums = set(nums)
 
         return len(nums)
