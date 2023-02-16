@@ -11,7 +11,7 @@ def insertionSort1(n, arr):
             print(arr[j], end=" ")
         print()
         
-      else:
+      else: 
           arr[i] =  last_element
           for j in range(n):
             print(arr[j], end=" ")
